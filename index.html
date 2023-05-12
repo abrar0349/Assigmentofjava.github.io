@@ -27,28 +27,33 @@
 <button id = "add" onclick = "Add()">Add</button>
 <button id = "delete" onclick = "Dadd()">Delete</button>
 
+<h1 id = "result"></h1>
+</div>
+
 <script>
-    let arr1 = [ "<br><br>"+"Abrar "," Altaf "," Tajmir "," Bilal "," Sohail "]
-    document.write(arr1)
+    let arr1 = [ "Abrar "," Altaf "," Tajmir "," Bilal "," Sohail "," Bin Qasim"]
+    let result = document.getElementById('result').innerText = arr1
+    // document.write(arr1)
     let a = document.getElementById('text1');
 function Dadd(){
-    let a =parseInt( document.getElementById('text1').value);
+    let a = parseInt( document.getElementById('text1').value);
 // console.log(typeof a)
-
-arr1.splice(a,1)
-document.write(arr1)
+// document.write("khan is khan")
+  let khan = result.splice(a,1)
+  document.getElementById('result').innerText = result
+// document.write(arr1)
 
 }
 
 function Add(){
     let a = parseInt( document.getElementById('text1').value);
     let b = document.getElementById('text2').value;
-    arr1.splice(a,1,b)
-    document.write(arr1)
+    let khan = result.splice(a,1,b)
+    document.getElementById('result').innerText = result
+    // document.getElementById('result').innerText = arr1.splice(a,1,b)
+    // document.write(arr1)
 
 }
 </script>
-</div>
- 
 </body>
 </html>
